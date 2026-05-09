@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NeuroVision AI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      background: #f8f9ff;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #6c63ff, #4ecdc4);
+      padding: 16px;
+      color: white;
+      text-align: center;
+    }
+
+    .header h1 { font-size: 16px; }
+    .header p  { font-size: 11px; opacity: 0.85; margin-top: 3px; }
+
+    .section {
+      padding: 14px 16px 6px;
+      font-weight: bold;
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .setting-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+    }
+
+    .setting-row label {
+      color: #333;
+      font-size: 13px;
+    }
+
+    select, input[type="range"] {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 12px;
+      background: white;
+      color: #333;
+      cursor: pointer;
+    }
+
+    input[type="range"] {
+      width: 100px;
+      padding: 0;
+    }
+
+    .range-val {
+      font-size: 12px;
+      color: #6c63ff;
+      font-weight: bold;
+      min-width: 30px;
+      text-align: right;
+    }
+
+    .apply-btn {
+      margin: 12px 16px;
+      width: calc(100% - 32px);
+      padding: 10px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .apply-btn:hover { background: #574fd6; }
+
+    .reset-btn {
+      margin: 0 16px 14px;
+      width: calc(100% - 32px);
+      padding: 8px;
+      background: white;
+      color: #888;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .reset-btn:hover { background: #f0f0f0; }
+
+    .tip {
+      margin: 0 16px 14px;
+      background: #fff3cd;
+      border-left: 3px solid #ffc107;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>🧠 NeuroVision AI</h1>
+    <p>Adapt any webpage for your needs</p>
+  </div>
+
+  <!-- Font Settings -->
+  <div class="section">Font</div>
+
+  <div class="setting-row">
+    <label>Font Style</label>
+    <select id="font">
+      <option value="default">Default</option>
+      <option value="dyslexic">OpenDyslexic</option>
+      <option value="readable">Arial (Readable)</option>
+    </select>
+  </div>
+
+  <div class="setting-row">
+    <label>Font Size</label>
+    <input type="range" id="fontSize" min="12" max="28" value="16">
+    <span class="range-val" id="fontSizeVal">16px</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Spacing Settings -->
+  <div class="section">Spacing</div>
+
+  <div class="setting-row">
+    <label>Line Height</label>
+    <input type="range" id="lineHeight" min="1" max="3" step="0.1" value="1.5">
+    <span class="range-val" id="lineHeightVal">1.5</span>
+  </div>
+
+  <div class="setting-row">
+    <label>Letter Spacing</label>
+    <input type="range" id="letterSpacing" min="0" max="5" step="0.5" value="0">
+    <span class="range-val" id="letterSpacingVal">0px</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Color Filter -->
+  <div class="section">Color Filter</div>
+
+  <div class="setting-row">
+    <label>Color Mode</label>
+    <select id="colorFilter">
+      <option value="none">Normal</option>
+      <option value="high-contrast">High Contrast</option>
+      <option value="warm">Warm (Sepia)</option>
+      <option value="reduced">Reduced Color</option>
+    </select>
+  </div>
+
+  <div class="divider"></div>
+
+  <button class="apply-btn" id="applyBtn">✅ Apply to This Page</button>
+  <button class="reset-btn" id="resetBtn">↩️ Reset Page to Normal</button>
+
+  <div class="tip">
+    💡 <strong>Tip:</strong> Select any text on a webpage → Right-click → Choose a NeuroVision option to adapt that text with AI.
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

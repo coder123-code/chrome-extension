@@ -1,0 +1,156 @@
+/* NeuroVision AI — Overlay Styles */
+
+#neurovision-overlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 380px;
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  z-index: 999999;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: nv-slide-in 0.3s ease;
+}
+
+@keyframes nv-slide-in {
+  from { transform: translateX(420px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+#nv-header {
+  background: linear-gradient(135deg, #6c63ff, #4ecdc4);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nv-title {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+#nv-close {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nv-close:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+#nv-body {
+  padding: 16px;
+  overflow-y: auto;
+  max-height: calc(80vh - 56px);
+}
+
+/* Loading */
+#nv-loading {
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  gap: 12px;
+  color: #555;
+}
+
+.nv-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #eee;
+  border-top: 3px solid #6c63ff;
+  border-radius: 50%;
+  animation: nv-spin 0.8s linear infinite;
+}
+
+@keyframes nv-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mode badge */
+#nv-mode-badge {
+  display: inline-block;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* Section labels */
+#nv-section-label,
+#nv-section-label2 {
+  font-weight: bold;
+  color: #444;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0 6px;
+}
+
+/* Adapted text */
+#nv-adapted-text {
+  background: #f0f7ff;
+  border-left: 4px solid #6c63ff;
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.7;
+  color: #222;
+  font-size: 14px;
+}
+
+/* Original text */
+#nv-original-text {
+  background: #f9f9f9;
+  border-left: 4px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  color: #888;
+  font-size: 12px;
+  line-height: 1.5;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+/* Copy button */
+#nv-copy-btn {
+  margin-top: 14px;
+  width: 100%;
+  padding: 10px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#nv-copy-btn:hover {
+  background: #574fd6;
+}
+
+/* Error */
+#nv-error {
+  color: #e74c3c;
+  padding: 12px;
+  text-align: center;
+}

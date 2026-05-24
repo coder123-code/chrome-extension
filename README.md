@@ -69,18 +69,6 @@ Uses Gemini API for fast and intelligent responses.
 
 ---
 
-# 🖼️ Preview
-
-<div align="center">
-
-| Home Interface      | AI Simplification   |
-| ------------------- | ------------------- |
-| Add Screenshot Here | Add Screenshot Here |
-
-</div>
-
----
-
 <h2>🛠️ Tech Stack</h2>
 
 <div align="center">
@@ -294,3 +282,5 @@ If you found this project useful:
 ### "Empowering accessibility through AI"
 
 </div>
+
+

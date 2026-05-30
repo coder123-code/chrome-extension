@@ -3,7 +3,7 @@
 // Handles: context menu, Groq API calls, messaging
 // ============================================================
 
-const GROQ_API_KEY = "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"; // get free at console.groq.com
+const GROQ_API_KEY = ""; // get free at console.groq.com
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 // ── Create right-click context menu ──────────────────────────
